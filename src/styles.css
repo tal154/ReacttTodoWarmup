@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+
+:root {
+  --post-it-yellow: #ffc;
+}
+
+html {
+  font-size: 20px;
+}
+
+.App {
+  font-family: "Reenie Beanie", cursive;
+  text-align: center;
+}
+
+/* Post-It styles */
+/* Inspired by https://code.tutsplus.com/tutorials/create-a-sticky-note-effect-in-5-easy-steps-with-css3-and-html5--net-13934 */
+
+li {
+  text-align: left;
+}
+
+ul.post-it {
+  margin-right: auto;
+  margin-left: auto;
+  list-style-type: none;
+  padding: 0;
+  color: #000;
+  background: var(--post-it-yellow);
+  display: block;
+  height: 10em;
+  width: 10em;
+  padding: 1em;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+/* Form & Buttons */
+
+button {
+  background-color: transparent;
+  font-family: "Courier New", Courier, monospace;
+  border: 0.5px solid gray;
+  transition: all 0.5s ease-in-out;
+  border-radius: 12%;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+input {
+  padding: 0.25rem;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 5%;
+}
+
+button[type="submit"] {
+  margin-top: 0.5rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* Nav Styles */
+
+nav.site-nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav.site-nav li {
+  display: inline;
+}
+
+nav.site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav.site-nav a:hover {
+  text-decoration: underline;
+}
+
+nav.site-nav li:not(:last-child)::after {
+  content: " | ";
+}
